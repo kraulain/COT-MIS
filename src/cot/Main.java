@@ -20,7 +20,7 @@ public class Main extends Application {
             Platform.exit();
         }
     }
-
+    
     private boolean login() {
         LoginView loginView = new LoginView();
         LoginController loginController = new LoginController(loginView);
