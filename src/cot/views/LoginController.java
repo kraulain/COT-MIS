@@ -36,8 +36,8 @@ public class LoginController {
     private void login_btnClicked() {
         stage.feedBack_lbl.setText("temporal pass");
         _grantAccess = true;
-        user.setIsAdmin(false);
-        user.setRole("HOD");
+        user.setIsAdmin(true);
+        user.setRole("SECRETARY");
         stage.close();
     }
     

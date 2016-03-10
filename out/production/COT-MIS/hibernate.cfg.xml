@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/cot_mis</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">toor</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
+    <mapping resource="cot/entities/Alert.hbm.xml"/>
+    <mapping resource="cot/entities/Message.hbm.xml"/>
+    <mapping resource="cot/entities/Delegation.hbm.xml"/>
+    <mapping resource="cot/entities/Student.hbm.xml"/>
+    <mapping resource="cot/entities/Group.hbm.xml"/>
+    <mapping resource="cot/entities/Course.hbm.xml"/>
+    <mapping resource="cot/entities/Instructor.hbm.xml"/>
+    <mapping resource="cot/entities/User.hbm.xml"/>
+    <mapping resource="cot/entities/Detail.hbm.xml"/>
+    <mapping resource="cot/entities/Notice.hbm.xml"/>
+    <mapping resource="cot/entities/CourseSession.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
