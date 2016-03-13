@@ -16,7 +16,7 @@ public class Navbar extends VBox {
     }
 
     VBox students_menu = new VBox();
-    TitledPane students_pane = new TitledPane("Contacts", students_menu);
+    TitledPane students_pane = new TitledPane("Students", students_menu);
 
     Label newStudent_lbl = new Label("New Student");
     Label findStudent_lbl = new Label("Find Student");
