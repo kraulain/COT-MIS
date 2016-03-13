@@ -17,6 +17,9 @@
         <property name="lname" type="string">
             <column name="lname" length="45" not-null="true" />
         </property>
+        <property name="sex" type="string">
+            <column name="sex" length="6" not-null="true" />
+        </property>
         <property name="department" type="string">
             <column name="department" length="45" not-null="true" />
         </property>
