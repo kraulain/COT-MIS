@@ -15,6 +15,7 @@ public class Student  implements java.io.Serializable {
      private Group group;
      private String fname;
      private String lname;
+     private String sex;
      private String department;
      private String option;
      private int level;
@@ -32,21 +33,35 @@ public class Student  implements java.io.Serializable {
     }
 
 	
-    public Student(String matricule, String fname, String lname, String department, String option, int level, String phoneNumber1, String email) {
+    /**
+     * 
+     * @param matricule
+     * @param fname
+     * @param lname
+     * @param sex
+     * @param department
+     * @param option
+     * @param level
+     * @param phoneNumber1
+     * @param email 
+     */
+    public Student(String matricule, String fname, String lname, String sex, String department, String option, int level, String phoneNumber1, String email) {
         this.matricule = matricule;
         this.fname = fname;
         this.lname = lname;
+        this.sex = sex;
         this.department = department;
         this.option = option;
         this.level = level;
         this.phoneNumber1 = phoneNumber1;
         this.email = email;
     }
-    public Student(String matricule, Group group, String fname, String lname, String department, String option, int level, String phoneNumber1, String phoneNumber2, String email, byte[] pic, Set messages, Set delegations, Set courseSessionsForDelegate1, Set courseSessionsForDelegate2, Detail detail) {
+    public Student(String matricule, Group group, String fname, String lname, String sex, String department, String option, int level, String phoneNumber1, String phoneNumber2, String email, byte[] pic, Set messages, Set delegations, Set courseSessionsForDelegate1, Set courseSessionsForDelegate2, Detail detail) {
        this.matricule = matricule;
        this.group = group;
        this.fname = fname;
        this.lname = lname;
+       this.sex = sex;
        this.department = department;
        this.option = option;
        this.level = level;
@@ -89,6 +104,7 @@ public class Student  implements java.io.Serializable {
     public void setLname(String lname) {
         this.lname = lname;
     }
+    
     public String getDepartment() {
         return this.department;
     }
@@ -172,6 +188,14 @@ public class Student  implements java.io.Serializable {
     
     public void setDetail(Detail detail) {
         this.detail = detail;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 
 
