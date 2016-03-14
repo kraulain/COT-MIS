@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 5, 2016 8:17:52 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cot.entities.Detail" table="detail" catalog="cot_mis" optimistic-lock="version">
+        <id name="matricule" type="string">
+            <column name="matricule" length="9" />
+            <generator class="foreign">
+                <param name="property">student</param>
+            </generator>
+        </id>
+        <one-to-one name="student" class="cot.entities.Student" constrained="true"></one-to-one>
+        <property name="homeTown" type="string">
+            <column name="home_town" length="45" not-null="true" />
+        </property>
+        <property name="parentContact1" type="string">
+            <column name="parent_contact1" length="45" not-null="true" />
+        </property>
+        <property name="parentContact2" type="string">
+            <column name="parent_contact2" length="45" />
+        </property>
+        <property name="dateOfBirth" type="date">
+            <column name="date_of_birth" length="10" not-null="true" />
+        </property>
+        <property name="note" type="string">
+            <column name="note" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

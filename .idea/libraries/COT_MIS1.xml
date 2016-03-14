@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="COT-MIS1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/COT-MIS.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
