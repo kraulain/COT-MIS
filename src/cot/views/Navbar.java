@@ -3,6 +3,8 @@ package cot.views;
 import cot.entities.User;
 import javafx.scene.control.Label;
 import javafx.scene.control.TitledPane;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -44,8 +46,11 @@ public class Navbar extends VBox {
     public void initialize() {
 
         newStudent_lbl.setFont(Font.font("Tahoma", FontWeight.BOLD, 16));
+        newStudent_lbl.setGraphic(new ImageView(new Image("cot/rsc/new_contact_icon.png")));
         findStudent_lbl.setFont(Font.font("Tahoma", FontWeight.BOLD, 16));
+        findStudent_lbl.setGraphic(new ImageView(new Image("cot/rsc/search_icon.png")));
         groups_lbl.setFont(Font.font("Tahoma", FontWeight.BOLD, 16));
+        groups_lbl.setGraphic(new ImageView(new Image("cot/rsc/group_icon.png")));
         students_menu.setStyle("-fx-background-color: darkgrey");
 
         newNotice_lbl.setFont(Font.font("Tahoma", FontWeight.BOLD, 16));
@@ -53,6 +58,7 @@ public class Navbar extends VBox {
         notice_menu.setStyle("-fx-background-color: darkgrey");
 
         newMessage_lbl.setFont(Font.font("Tahoma", FontWeight.BOLD, 16));
+        newMessage_lbl.setGraphic(new ImageView(new Image("cot/rsc/mail_icon.png")));
         allMessages_lbl.setFont(Font.font("Tahoma", FontWeight.BOLD, 16));
         message_menu.setStyle("-fx-background-color: darkgrey");
 
