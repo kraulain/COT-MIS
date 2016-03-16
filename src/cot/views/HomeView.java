@@ -12,6 +12,8 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToolBar;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.TilePane;
@@ -53,7 +55,7 @@ public class HomeView extends Stage {
         initSearchBox();
         initNav();
         initTabPane();
-        
+        //search_btn.setGraphic(new ImageView(new Image("cot/rsc/magnifier_icon.png")));
         toolBar.getItems().add(refresh_btn);
         header_hBox.getChildren().add(temp);
         contentArea_VBox.getChildren().addAll(toolBar, tabPane);
@@ -91,6 +93,7 @@ public class HomeView extends Stage {
     private void initTabPane(){
         tabPane.setMinHeight(600);
         main_tab.setClosable(false);
+        main_tab.setGraphic(new ImageView(new Image("cot/rsc/home_icon.png")));
         main_tab.setStyle("-fx-background-color: lightgreen");
         main_tab.setContent(tilePane);
         tabPane.getTabs().add(main_tab);

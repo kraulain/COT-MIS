@@ -65,6 +65,7 @@ public class Navbar extends VBox {
         manage_lbl.setFont(Font.font("Tahoma", FontWeight.BOLD, 16));
         reports_lbl.setFont(Font.font("Tahoma", FontWeight.BOLD, 16));
         settings_lbl.setFont(Font.font("Tahoma", FontWeight.BOLD, 16));
+        //settings_lbl.setGraphic(new ImageView(new Image("cot/rsc/new_contact_icon.png")));
 
         admin_menu.setStyle("-fx-background-color: pink");
 

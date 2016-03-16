@@ -2,6 +2,8 @@ package cot.views;
 
 import javafx.geometry.Rectangle2D;
 import javafx.scene.control.Tooltip;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Screen;
 
 public class HomeController {
@@ -33,6 +35,7 @@ public class HomeController {
     private void newStudentClicked() {
         NewStudentTab newStudentTab = new NewStudentTab();
         newStudentTab.intialize();
+        newStudentTab.setGraphic(new ImageView(new Image("cot/rsc/student_id_icon.png")));
         newStudentTab.setContent(newStudentTab.root_gridPane);
         newStudentTab.setText("New Student");
         newStudentTab.setTooltip(new Tooltip("Create a new student"));
