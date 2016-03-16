@@ -28,6 +28,8 @@ public class NewStudentTab extends Tab{
     TextField fname_txt = new TextField();
     Label lname_lbl = new Label("Last Name:");
     TextField lname_txt = new TextField();
+    Label sex_lbl = new Label("Sex:");
+    ChoiceBox sex_box = new ChoiceBox();
     Label department_lb = new Label("Department:");
     ChoiceBox department_box = new ChoiceBox();
     Label option_lbl = new Label("Option:");
@@ -59,6 +61,7 @@ public class NewStudentTab extends Tab{
     Button save_btn = new Button("Save");
     
     ObservableList<String> departmentList = FXCollections.observableArrayList();
+    ObservableList<String> sexList = FXCollections.observableArrayList();
     ObservableList<String> levelList = FXCollections.observableArrayList();
     ObservableList<String> optionList = FXCollections.observableArrayList();
 
@@ -72,31 +75,33 @@ public class NewStudentTab extends Tab{
         root_gridPane.add(fname_txt, 1, 1, 1, 1);
         root_gridPane.add(lname_lbl, 2, 1, 1, 1);
         root_gridPane.add(lname_txt, 3, 1, 1, 1);
-        root_gridPane.add(department_lb, 0, 2, 1, 1);
-        root_gridPane.add(department_box, 1, 2, 1, 1);
-        root_gridPane.add(option_lbl, 2, 2, 1, 1);
-        root_gridPane.add(option_box, 3, 2, 1, 1);
-        root_gridPane.add(level_lbl, 0, 3, 1, 1);
-        root_gridPane.add(level_box, 1, 3, 1, 1);
-        root_gridPane.add(phone1_lbl, 0, 4, 1, 1);
-        root_gridPane.add(phone1_txt, 1, 4, 1, 1);
-        root_gridPane.add(phone2_lbl, 2, 4, 1, 1);
-        root_gridPane.add(phone2_txt, 3, 4, 1, 1);
-        root_gridPane.add(email_lbl, 0, 5, 1, 1);
-        root_gridPane.add(email_txt, 1, 5, 1, 1);
-        root_gridPane.add(pic_lbl, 2, 5, 1, 1);
-        root_gridPane.add(pic_Hbox, 3, 5, 1, 1);
-        root_gridPane.add(homeTown_lbl, 0, 6, 1, 1);
-        root_gridPane.add(homeTown_txt, 1, 6, 1, 1);
-        root_gridPane.add(parent1_lbl, 0, 7, 1, 1);
-        root_gridPane.add(parent1_txt, 1, 7, 1, 1);
-        root_gridPane.add(parent2_lbl, 2, 7, 1, 1);
-        root_gridPane.add(parent2_txt, 3, 7, 1, 1);
-        root_gridPane.add(dob_lbl, 0, 8, 1, 1);
-        root_gridPane.add(dob_pick, 1, 8, 1, 1);
-        root_gridPane.add(note_lbl, 0, 9, 1, 1);
-        root_gridPane.add(note_txt, 1, 9, 3, 1);
-        root_gridPane.add(save_btn, 2, 10, 1, 1);
+        root_gridPane.add(sex_lbl, 0, 2, 1, 1);
+        root_gridPane.add(sex_box, 1, 2, 1, 1);
+        root_gridPane.add(department_lb, 0, 3, 1, 1);
+        root_gridPane.add(department_box, 1, 3, 1, 1);
+        root_gridPane.add(option_lbl, 2, 3, 1, 1);
+        root_gridPane.add(option_box, 3, 3, 1, 1);
+        root_gridPane.add(level_lbl, 0, 4, 1, 1);
+        root_gridPane.add(level_box, 1, 4, 1, 1);
+        root_gridPane.add(phone1_lbl, 0, 5, 1, 1);
+        root_gridPane.add(phone1_txt, 1, 5, 1, 1);
+        root_gridPane.add(phone2_lbl, 2, 5, 1, 1);
+        root_gridPane.add(phone2_txt, 3, 5, 1, 1);
+        root_gridPane.add(email_lbl, 0, 6, 1, 1);
+        root_gridPane.add(email_txt, 1, 6, 1, 1);
+        root_gridPane.add(pic_lbl, 2, 6, 1, 1);
+        root_gridPane.add(pic_Hbox, 3, 6, 1, 1);
+        root_gridPane.add(homeTown_lbl, 0, 7, 1, 1);
+        root_gridPane.add(homeTown_txt, 1, 7, 1, 1);
+        root_gridPane.add(parent1_lbl, 0, 8, 1, 1);
+        root_gridPane.add(parent1_txt, 1, 8, 1, 1);
+        root_gridPane.add(parent2_lbl, 2, 8, 1, 1);
+        root_gridPane.add(parent2_txt, 3, 8, 1, 1);
+        root_gridPane.add(dob_lbl, 0, 9, 1, 1);
+        root_gridPane.add(dob_pick, 1, 9, 1, 1);
+        root_gridPane.add(note_lbl, 0, 10, 1, 1);
+        root_gridPane.add(note_txt, 1, 10, 3, 1);
+        root_gridPane.add(save_btn, 2, 11, 1, 1);
         
         root_gridPane.setAlignment(Pos.TOP_CENTER);
         root_gridPane.setVgap(10);
@@ -107,10 +112,15 @@ public class NewStudentTab extends Tab{
         initChoiceBoxes();
     }
     
+    /**
+     * 
+     */
     private void initChoiceBoxes(){
+        sexList.addAll("Male", "Female");
         departmentList.addAll("Computer Engineering", "Electrical Engineering", "HND");
         levelList.addAll("200","300","400");
         optionList.addAll("Software Engineering", "Computer Networks", "Electrical Engineering", "Telecomunication", "EPS", "ICT");
+        sex_box.getItems().addAll(sexList);
         department_box.getItems().addAll(departmentList);
         level_box.getItems().addAll(levelList);
         option_box.getItems().addAll(optionList);
