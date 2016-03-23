@@ -36,7 +36,7 @@ public class HomeController {
         NewStudentTab newStudentTab = new NewStudentTab();
         newStudentTab.intialize();
         newStudentTab.setGraphic(new ImageView(new Image("cot/rsc/student_id_icon.png")));
-        newStudentTab.setContent(newStudentTab.root_gridPane);
+        newStudentTab.setContent(newStudentTab.root_vBox);
         newStudentTab.setText("New Student");
         newStudentTab.setTooltip(new Tooltip("Create a new student"));
         stage.tabPane.getTabs().add(newStudentTab);
