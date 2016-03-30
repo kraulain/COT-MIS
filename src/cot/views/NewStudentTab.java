@@ -12,6 +12,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -42,7 +44,12 @@ public class NewStudentTab extends Tab{
     TextField email_txt = new TextField();
     Label pic_lbl = new Label("Picture:");
     TextField pic_txt = new TextField();
-    Button browse_btn = new Button("Browse");
+    
+    // putting a browse icon
+    
+    Image browse_icon = new Image(getClass().getResourceAsStream("browse.png"));
+    Button browse_btn = new Button("",new ImageView(browse_icon));
+    
     HBox pic_Hbox = new HBox(pic_lbl,pic_txt,browse_btn);
     
     Label homeTown_lbl = new Label("Home Town:");
@@ -56,7 +63,12 @@ public class NewStudentTab extends Tab{
     Label note_lbl = new Label("Note:");
     TextArea note_txt = new TextArea();
     
-    Button save_btn = new Button("Save");
+    //putting a save icon
+    
+    Image save_icon = new Image(getClass().getResourceAsStream("save.png"));
+    Button save_btn = new Button("",new ImageView(save_icon));
+    
+  
     
     ObservableList<String> departmentList = FXCollections.observableArrayList();
     ObservableList<String> levelList = FXCollections.observableArrayList();
