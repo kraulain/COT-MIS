@@ -54,18 +54,23 @@ public class Navbar extends VBox {
         students_menu.setStyle("-fx-background-color: darkgrey");
 
         newNotice_lbl.setFont(Font.font("Tahoma", FontWeight.BOLD, 16));
+        newMessage_lbl.setGraphic(new ImageView(new Image("cot/rsc/newnotice.png")));
         allNotices_lbl.setFont(Font.font("Tahoma", FontWeight.BOLD, 16));
+        allNotices_lbl.setGraphic(new ImageView(new Image("cot/rsc/allnotice.png")));
         notice_menu.setStyle("-fx-background-color: darkgrey");
 
         newMessage_lbl.setFont(Font.font("Tahoma", FontWeight.BOLD, 16));
-        newMessage_lbl.setGraphic(new ImageView(new Image("cot/rsc/mail_icon.png")));
+        newMessage_lbl.setGraphic(new ImageView(new Image("cot/rsc/message.png")));
         allMessages_lbl.setFont(Font.font("Tahoma", FontWeight.BOLD, 16));
+        allMessages_lbl.setGraphic(new ImageView(new Image("cot/rsc/allmessage.png")));
         message_menu.setStyle("-fx-background-color: darkgrey");
 
         manage_lbl.setFont(Font.font("Tahoma", FontWeight.BOLD, 16));
+        manage_lbl.setGraphic(new ImageView(new Image("cot/rsc/manage.png")));
         reports_lbl.setFont(Font.font("Tahoma", FontWeight.BOLD, 16));
+        reports_lbl.setGraphic(new ImageView(new Image("cot/rsc/report.png")));
         settings_lbl.setFont(Font.font("Tahoma", FontWeight.BOLD, 16));
-        //settings_lbl.setGraphic(new ImageView(new Image("cot/rsc/new_contact_icon.png")));
+        settings_lbl.setGraphic(new ImageView(new Image("cot/rsc/setting.png")));
 
         admin_menu.setStyle("-fx-background-color: pink");
 
