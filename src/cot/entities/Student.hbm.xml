@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 5, 2016 8:17:52 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cot.entities.Student" table="student" catalog="cot_mis" optimistic-lock="version">
+        <id name="matricule" type="string">
+            <column name="matricule" length="9" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="group" class="cot.entities.Group" fetch="select">
+            <column name="group" />
+        </many-to-one>
+        <property name="fname" type="string">
+            <column name="fname" length="45" not-null="true" />
+        </property>
+        <property name="lname" type="string">
+            <column name="lname" length="45" not-null="true" />
+        </property>
+        <property name="sex" type="string">
+            <column name="sex" length="6" not-null="true" />
+        </property>
+        <property name="department" type="string">
+            <column name="department" length="45" not-null="true" />
+        </property>
+        <property name="option" type="string">
+            <column name="option" length="45" not-null="true" />
+        </property>
+        <property name="level" type="int">
+            <column name="level" not-null="true" />
+        </property>
+        <property name="phoneNumber1" type="string">
+            <column name="phone_number1" length="45" not-null="true" />
+        </property>
+        <property name="phoneNumber2" type="string">
+            <column name="phone_number2" length="45" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" not-null="true" />
+        </property>
+        <property name="pic" type="binary">
+            <column name="pic" />
+        </property>
+        <set name="messages" table="message" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="receipient" length="9" />
+            </key>
+            <one-to-many class="cot.entities.Message" />
+        </set>
+        <set name="delegations" table="delegation" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="student" length="9" not-null="true" />
+            </key>
+            <one-to-many class="cot.entities.Delegation" />
+        </set>
+        <set name="courseSessionsForDelegate1" table="course_session" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="delegate1" length="9" />
+            </key>
+            <one-to-many class="cot.entities.CourseSession" />
+        </set>
+        <set name="courseSessionsForDelegate2" table="course_session" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="delegate2" length="9" />
+            </key>
+            <one-to-many class="cot.entities.CourseSession" />
+        </set>
+        <one-to-one name="detail" class="cot.entities.Detail"></one-to-one>
+    </class>
+</hibernate-mapping>
